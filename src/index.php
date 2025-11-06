@@ -11,16 +11,12 @@
 </head>
 
 <body class="inter">
-        <?php include "components/header.php"; ?>
-
+    <?php include "components/header.php"; ?>
     <main>
-    <?php include "components/hero.php"; ?>
-            <?php include "components/product_list.php"; ?>
-
-   
-</main>
+        <?php include "components/hero.php"; ?>
+        <?php include "components/product_list.php"; ?>
+    </main>
     <?php include "components/footer.php"; ?>
-
 </body>
     <script type="module" src="js/main.js"></script>
 </html>
