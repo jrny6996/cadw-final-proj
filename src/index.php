@@ -15,6 +15,8 @@
 
     <main>
     <?php include "components/hero.php"; ?>
+            <?php include "components/product_list.php"; ?>
+
    
 </main>
     <?php include "components/footer.php"; ?>
