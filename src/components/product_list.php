@@ -12,11 +12,13 @@
 
     <div class="container">
         <div>
-            <?php
-            foreach ($catergories as $cat) {
-            ?>
-                <button class="product-select"><?php echo ($cat); ?></button>
-            <?php } ?>
+            <div class="category-select">
+                <?php
+                foreach ($catergories as $cat) {
+                ?>
+                    <button class="product-select"><?php echo ($cat); ?></button>
+                <?php } ?>
+            </div>
 
         </div>
         <div>
