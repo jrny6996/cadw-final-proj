@@ -1,13 +1,27 @@
 <section>
-<!-- Jonathan's section -->
- <div class="container">
-    <div>
-        <button>Category 1</button>
-        <button>Category 2</button>
+    <!-- Jonathan's section -->
+    <?php
+    $catergories = [
+        "Phones",
+        "Laptops",
+        "Desktops",
+        "Tablets"
+    ];
+
+    ?>
+
+    <div class="container">
+        <div>
+            <?php
+            foreach ($catergories as $cat) {
+            ?>
+                <button class="product-select"><?php echo ($cat); ?></button>
+            <?php } ?>
+
+        </div>
+        <div>
+            <h2>Products</h2>
+        </div>
     </div>
-    <div>
-        <h2>Products</h2>
-    </div>
- </div>
 
 </section>
