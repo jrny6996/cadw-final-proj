@@ -1,5 +1,0 @@
-CREATE TABLE users (
-    id INT AUTO_INCREMENT PRIMARY KEY,
-    email VARCHAR(64),
-    password VARCHAR(128)
-);
