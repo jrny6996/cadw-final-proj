@@ -8,7 +8,7 @@ CREATE TABLE products(
     id INT AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(64) NOT NULL,
     description VARCHAR(512),
-    price DECIMAL(2)
+    usd_price DECIMAL(10,2)
 );
 
 CREATE TABLE product_images(
