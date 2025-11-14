@@ -8,6 +8,7 @@
   color: white;
 }
 
+
 .container {
   min-width: 70vw;
   max-width: 1400px;
@@ -22,6 +23,8 @@ body {
   margin: 0px;
   display: flex;
   flex-direction: column;
+  margin:0;
+  padding:0;
 }
 
 main {
@@ -52,11 +55,108 @@ section {
   min-height: 100vh;
   padding: 16px 0px;
 }
-.product-select {
-  background: blue;
+
+.category-select {
+  display: flex;
+  width: fit-content;
+  space-x
+  margin-right: auto;
+  background: hsl(0, 0%, 20%);
+  color: white;
+  border-radius: 30px;
+  font-size: 24px;
+  padding: 4px;
+  border: hsl(0, 0%, 25%) solid 2px;
+
+
+  > button {
   color: white;
   border-radius: 20px;
-  font-size: 24px;
-  padding: 2px 20px;
-  border: blue solid 2px;
+  font-size: 22px;
+  padding: 4px 20px;
+  background: hsla(0, 0%, 100%, 0%);
+  border: none;
+  cursor: pointer;
 }
+> button.active {
+  color: black;
+  border-radius: 20px;
+  font-size: 22px;
+  padding: 2px 20px;
+  background: hsla(0, 0%, 100%, 100%);
+  border: none;
+  transition: all 0.35s;
+
+  cursor: pointer;
+}
+}
+
+.product-category-list{
+    display: flex;
+    padding: 20px 0px;
+    flex-basis: 1;
+      overflow-x: scroll;
+      justify-content: start;
+    /* background: red; */
+}
+
+.btn {
+  background: none;
+  border: none;
+  padding: 10px 24px;
+  color: #294fef;
+  border-radius: 28px;
+  font-size:16px;
+  cursor: pointer;
+  transition: all 0.25s;
+  display: flex;
+  align-items: center;
+  justify: center;
+    text-decoration: none;
+
+
+}
+.btn:hover{
+  text-decoration: underline;
+}
+
+.btn-primary{
+  background: #294fef;
+  color: white;
+  text-decoration: none !important;
+
+
+}
+.btn-primary:hover{
+  background: #1838b9ff;
+
+}
+
+.product-horizontal-list-card{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: start;
+  padding: 16px;
+  text-align: center;
+  width: 360px ;
+
+
+   > img{
+  border-radius: 30px;
+  object-fit: cover;
+}
+
+>  h3{
+  margin: 12px 0px 0px;
+}
+>p{
+  margin: 8px 20px 0px;
+  
+}
+.label{
+  color: orange;
+  margin: 16px 0px;
+}
+}
+
