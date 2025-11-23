@@ -11,7 +11,7 @@
 
     ?>
 
-    <div class="container">
+    <div class="container ">
         <div>
             <div class="category-select">
                 <?php

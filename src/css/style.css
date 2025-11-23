@@ -14,6 +14,7 @@
   max-width: 1400px;
   margin-left: auto;
   margin-right: auto;
+
   flex: 1;
 }
 
@@ -94,7 +95,7 @@ section {
   display: flex;
   padding: 20px 0px;
   flex-basis: 1;
-  overflow-x: auto;
+  overflow-x: scroll;
   justify-content: start;
 }
 
@@ -134,7 +135,7 @@ section {
   transition: all 0.25s;
   display: flex;
   align-items: center;
-  justify: center;
+  justify-content: center;
   text-decoration: none;
 
 
@@ -223,4 +224,23 @@ filter: blur(0px);
 
 .image-row::-webkit-scrollbar {
   display: none;
+}
+
+[popover] {
+  background-color: white; 
+  color: black; 
+  border: none;
+  width: 80vw;
+  height: 70vh;
+  max-width: 800px;
+  max-height: 900px;
+  padding: 48px;
+  border-radius: 24px;
+  
+}
+
+[popover]::backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
 }

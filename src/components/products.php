@@ -73,12 +73,21 @@ foreach ($result as $row) {
                 $<?php echo ($row['usd_price']); ?>
             </strong></p>
         <div style="display: flex;">
-            <a href="/#" style="text-decoration: none !important;">
-                <button class="btn btn-primary">
+            
+                <button class="btn btn-primary "
+                style="text-decoration: none !important;"
+  popovertarget="product-popover"
+                hx-get="/components/product_page.php?id=<?php echo($row['id']); ?>"
+                hx-target="#product-popover"
+                hx-swap="innerHTML"
+                data-id="<?php echo($row['id']);?>"
+                >
                     Learn More
                 </button>
-            </a>
-            <button class="btn">
+
+            <button class="btn"
+          
+            >
                 Buy <span>&nbsp;</span>
                 <?php include "icons/chevron.php" ?>
 
@@ -96,6 +105,8 @@ foreach ($result as $row) {
 
 
 ?>
+
+<div popover id="product-popover"></div>
 <?php
 // echo ($catergory);
 ?>
