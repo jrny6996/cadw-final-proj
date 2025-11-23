@@ -32,7 +32,40 @@ if (isset($_GET['category']) && $_GET['category'] != 'All') {
 foreach ($result as $row) {
 ?>
     <div class="product-horizontal-list-card">
-        <img height="300" width="360" src="images/example_img.jpg" alt="product image">
+        <?php
+          
+            
+            $curr = $conn->prepare("SELECT url FROM product_images WHERE product_id=?");
+            $curr->bind_param("i", $row['id']);
+            $curr->execute();
+            $images = $curr->get_result();
+
+            foreach($images as $image){
+                // var_dump($image['url']);
+
+               
+                ?>
+                <div class="img-cover featured-image">
+
+                        <img height="360" width="360" src="<?php echo($image['url']); ?>" alt="product image" class="featured">
+
+                </div>
+                <div class="image-row">
+
+                <?php
+                $next_active = true;
+                break;
+            }
+
+        ?>
+
+        <?php foreach($images as $image){?>  
+
+                <img  height="64" width="64"  src="<?php echo($image['url']); ?>" alt="product image" class="img-row-item <?php if($next_active == true) echo('active'); $next_active = false;    ?>">
+
+            <?php }?>
+        </div>
+
         <p style="font-weight: 500; color:gray; margin: 20px 72px 0px;"><?php echo ($row['label']); ?></p>
         <h3 style="padding-left: 12px;"><?php echo ($row['name']); ?></h3>
         <p><?php echo (substr($row['description'], 0, 56) . "..."); ?></p>

@@ -1,4 +1,7 @@
-import { handleCategoryClicks } from "./productList.js";
+import { handleCategoryClicks, handleImageClicks } from "./productList.js";
 // console.log("Hello from main");
 
 handleCategoryClicks();
+handleImageClicks();
+
+
