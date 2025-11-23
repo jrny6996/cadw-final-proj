@@ -26,3 +26,31 @@ INSERT INTO products (id, name, label, description, usd_price, category_id) VALU
 (10, 'PearPad', 'Everyday tablet simplicity', 'PearPad is perfect for casual use, browsing, and media consumption with its responsive touch display.', 499.00, 4),
 (11, 'PearPad Air', 'Thin. Light. Powerful.', 'PearPad Air combines ultra-thin design with a P-Chip for smooth multitasking and creative work.', 599.00, 4),
 (12,'PearPad Pro', 'Professional creativity tablet', 'PearPad Pro features PearCanvas display, Apple Pencil-style support, and high-speed processing for artists and professionals.', 999.00, 4);
+
+
+-- Images
+INSERT INTO product_images(url, is_featured, product_id) VALUES
+("/product-images/15/metal.png", false, 1),("/product-images/15/orange.png", false, 1),("/product-images/15/white.png", false, 1),
+
+("/product-images/15pro/orange.png", true, 2), ( "/product-images/15pro/blue.png", false, 2), ("/product-images/15pro/purple.png", false, 2), (    "/product-images/15pro/silver.png", false, 2),
+
+("/product-images/se/black.png", true, 3),("/product-images/se/white.png", false, 3),
+
+("/product-images/BoscBookAir/blue.jpeg", false, 4),
+
+("/product-images/BoscBookPro14/silver.jpeg", false, 5),("/product-images/BoscBookPro14/black.jpeg", false, 5),
+
+
+("/product-images/BoscBookPro16/silver.jpeg", false, 6),("/product-images/BoscBookPro16/black.jpeg", false, 6),
+
+("/product-images/PearStationMini/silver.png", false, 7),
+
+("/product-images/PearStation/silver.png", false, 8),
+
+("/product-images/PearStationStudio/silver.png", false, 9),
+
+("/product-images/PearPad/pink.jpg", false, 10),
+
+("/product-images/PearPadAir/blue.jpg", false, 11),
+
+("/product-images/PearPadPro/black.jpg", false, 12);
