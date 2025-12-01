@@ -198,37 +198,38 @@ section {
   overflow-x: scroll;
   scrollbar-width: none;
   -ms-overflow-style: none;
-  justify-content: center  ;
+  justify-content: center;
   object-fit: contain;
-  
 
-  
+
+
 }
-.img-row-item{
-    object-fit: cover;
-    opacity: 0.5;
-    width: 64px;
-    border-radius: 8px;
-    margin: 4px   ;
-    filter: blur(1px);
-    transition: all .2s;
-    cursor: pointer;
+
+.img-row-item {
+  object-fit: cover;
+  opacity: 0.5;
+  width: 64px;
+  border-radius: 8px;
+  margin: 4px;
+  filter: blur(1px);
+  transition: all .2s;
+  cursor: pointer;
 
 }
 
 .img-row-item.active {
-filter: blur(0px);
-    opacity: 1;
+  filter: blur(0px);
+  opacity: 1;
 
-  }
+}
 
 .image-row::-webkit-scrollbar {
   display: none;
 }
 
 [popover] {
-  background-color: white; 
-  color: black; 
+  background-color: white;
+  color: black;
   border: none;
   width: 80vw;
   height: 70vh;
@@ -236,7 +237,7 @@ filter: blur(0px);
   max-height: 900px;
   padding: 48px;
   border-radius: 24px;
-  
+
 }
 
 [popover]::backdrop {
@@ -244,3 +245,39 @@ filter: blur(0px);
   backdrop-filter: blur(4px);
   -webkit-backdrop-filter: blur(4px);
 }
+
+.card {
+  background-color: white;
+  border-radius: 16px;
+  box-shadow: 2px 2px 4px rgba(163, 163, 163, 0.322);
+}
+
+.card-body {
+  padding: 24px;
+}
+
+.default-form {
+  display: flex;
+  flex-direction: column;
+
+  >input {
+    width: 100%;
+    margin: 12px 0px 0px 0px;
+    font-size: 16px;
+    border: #f1f1f1 solid 1px;
+    padding: 8px 0px;
+    border-radius: 8px;
+
+  }
+
+  >input:focus {
+    outline: none;
+    border: #f1f1f1 solid 1px;
+  }
+}
+
+/* .submit-btn{
+background-color: #294fef !important ;
+  color: rgb(255, 255, 255);
+
+} */
