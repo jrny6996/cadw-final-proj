@@ -84,9 +84,9 @@ foreach ($result as $row) {
                 >
                     Learn More
                 </button>
-
-            <button class="btn"
           
+            <button class="btn buy-btn"
+            data-product-id= "<?php echo($row['id']);?>"
             >
                 Buy <span>&nbsp;</span>
                 <?php include "icons/chevron.php" ?>

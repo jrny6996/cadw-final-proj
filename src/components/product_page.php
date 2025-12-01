@@ -55,7 +55,14 @@ if(isset($_GET['id'])){
 
             <?php }?>
             </div>
-                   <button class="btn-primary btn buy-now" data-id="<?php echo($row['id']);?>" style="margin-top:16px">Buy Now</button>
+                   <button
+                   hx-trigger="click"
+                   hx-get="/"
+                   hx-select="#product-popover"
+                   hx-target="#product-popover"
+                   hx-swap="innerHTML"
+                   
+                   class="btn-primary btn buy-btn"  data-product-id="<?php echo($row['id']);?>" style="margin-top:16px">Buy Now</button>
   
              </div>
                 <div class="img-cover featured-image" style=" object-fit: cover;">
