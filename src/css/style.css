@@ -47,9 +47,9 @@ header {
 }
 
 footer {
-  min-height: 400px;
-  background-color: black;
-  color: white;
+  min-height: 0px;
+  background-color: rgb(26, 153, 94);
+  color: rgb(22, 22, 22);
 }
 
 section {
