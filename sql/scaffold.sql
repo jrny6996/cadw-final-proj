@@ -27,16 +27,20 @@ CREATE TABLE product_images(
     product_id INT NOT NULL,
     FOREIGN KEY (product_id) REFERENCES products(id)
 );
-CREATE TABLE purchases(
-    id INT PRIMARY KEY AUTO_INCREMENT,
-    quantity INT NOT NULL,
-    product_id INT NOT NULL,
-    FOREIGN KEY (product_id) REFERENCES products(id)
-);
 
 CREATE TABLE orders(
     id INT AUTO_INCREMENT PRIMARY KEY,
     user_id INT NOT NULL,
     is_payed boolean,
+    shipping_address VARCHAR(128),
     FOREIGN KEY (user_id) REFERENCES users(id)
+);
+
+CREATE TABLE purchases(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    quantity INT NOT NULL,
+    product_id INT NOT NULL,
+    order_id INT NOT NULL,
+    FOREIGN KEY (product_id) REFERENCES products(id),
+    FOREIGN KEY (order_id) REFERENCES orders(id)
 );

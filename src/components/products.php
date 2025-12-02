@@ -33,66 +33,65 @@ foreach ($result as $row) {
 ?>
     <div class="product-horizontal-list-card">
         <?php
-          
-            
-            $curr = $conn->prepare("SELECT url FROM product_images WHERE product_id=?");
-            $curr->bind_param("i", $row['id']);
-            $curr->execute();
-            $images = $curr->get_result();
 
-            foreach($images as $image){
-                // var_dump($image['url']);
 
-               
-                ?>
-                <div class="img-cover featured-image">
+        $curr = $conn->prepare("SELECT url FROM product_images WHERE product_id=?");
+        $curr->bind_param("i", $row['id']);
+        $curr->execute();
+        $images = $curr->get_result();
 
-                        <img height="360" width="360" src="<?php echo($image['url']); ?>" alt="product image" class="featured">
+        foreach ($images as $image) {
+            // var_dump($image['url']);
 
-                </div>
-                <div class="image-row">
-
-                <?php
-                $next_active = true;
-                break;
-            }
 
         ?>
+            <div class="img-cover featured-image">
 
-        <?php foreach($images as $image){?>  
+                <img height="360" width="360" src="<?php echo ($image['url']); ?>" alt="product image" class="featured">
 
-                <img  height="64" width="64"  src="<?php echo($image['url']); ?>" alt="product image" class="img-row-item <?php if($next_active == true) echo('active'); $next_active = false;    ?>">
+            </div>
+            <div class="image-row">
 
-            <?php }?>
-        </div>
+            <?php
+            $next_active = true;
+            break;
+        }
 
-        <p style="font-weight: 500; color:gray; margin: 20px 72px 0px;"><?php echo ($row['label']); ?></p>
-        <h3 style="padding-left: 12px;"><?php echo ($row['name']); ?></h3>
-        <p><?php echo (substr($row['description'], 0, 56) . "..."); ?></p>
-        <p class="label"><strong>
-                $<?php echo ($row['usd_price']); ?>
-            </strong></p>
-        <div style="display: flex;">
-            
+            ?>
+
+            <?php foreach ($images as $image) { ?>
+
+                <img height="64" width="64" src="<?php echo ($image['url']); ?>" alt="product image" class="img-row-item <?php if ($next_active == true) echo ('active');
+                                                                                                                        $next_active = false;    ?>">
+
+            <?php } ?>
+            </div>
+
+            <p style="font-weight: 500; color:gray; margin: 20px 72px 0px;"><?php echo ($row['label']); ?></p>
+            <h3 style="padding-left: 12px;"><?php echo ($row['name']); ?></h3>
+            <p><?php echo (substr($row['description'], 0, 56) . "..."); ?></p>
+            <p class="label"><strong>
+                    $<?php echo ($row['usd_price']); ?>
+                </strong></p>
+            <div style="display: flex;">
+
                 <button class="btn btn-primary "
-                style="text-decoration: none !important;"
-  popovertarget="product-popover"
-                hx-get="/components/product_page.php?id=<?php echo($row['id']); ?>"
-                hx-target="#product-popover"
-                hx-swap="innerHTML"
-                data-id="<?php echo($row['id']);?>"
-                >
+                    style="text-decoration: none !important;"
+                    popovertarget="product-popover"
+                    hx-get="/components/product_page.php?id=<?php echo ($row['id']); ?>"
+                    hx-target="#product-popover"
+                    hx-swap="innerHTML"
+                    data-id="<?php echo ($row['id']); ?>">
                     Learn More
                 </button>
-          
-            <button class="btn buy-btn"
-            data-product-id= "<?php echo($row['id']);?>"
-            >
-                Buy <span>&nbsp;</span>
-                <?php include "icons/chevron.php" ?>
 
-            </button>
-        </div>
+                <button class="btn buy-btn"
+                    data-product-id="<?php echo ($row['id']); ?>">
+                    Buy <span>&nbsp;</span>
+                    <?php include "icons/chevron.php" ?>
+
+                </button>
+            </div>
     </div>
 
 
