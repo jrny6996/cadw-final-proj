@@ -82,7 +82,7 @@ if ($method == 'POST') {
 
     </main>
 
-
+    <script src="js/main.js" type="module"></script>
 </body>
 
 </html>

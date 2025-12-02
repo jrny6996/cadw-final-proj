@@ -8,7 +8,6 @@
   color: white;
 }
 
-
 .container {
   min-width: 70vw;
   max-width: 1400px;
@@ -68,8 +67,7 @@ section {
   padding: 4px;
   border: hsl(0, 0%, 25%) solid 2px;
 
-
-  >button {
+  > button {
     color: white;
     border-radius: 20px;
     font-size: 22px;
@@ -79,7 +77,7 @@ section {
     cursor: pointer;
   }
 
-  >button.active {
+  > button.active {
     color: black;
     border-radius: 20px;
     font-size: 22px;
@@ -124,7 +122,6 @@ section {
   scrollbar-color: #294fef transparent;
 }
 
-
 .btn {
   background: none;
   border: none;
@@ -138,8 +135,6 @@ section {
   align-items: center;
   justify-content: center;
   text-decoration: none;
-
-
 }
 
 .btn:hover {
@@ -150,13 +145,10 @@ section {
   background: #294fef;
   color: white;
   text-decoration: none !important;
-
-
 }
 
 .btn-primary:hover {
   background: #1838b9ff;
-
 }
 
 .product-horizontal-list-card {
@@ -168,25 +160,23 @@ section {
   text-align: center;
   width: 360px;
 
-
-  >.img-cover {
+  > .img-cover {
     overflow: hidden;
     /* border: rgb(224, 224, 224) solid 2px; */
     background-color: white;
-      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.08);
     display: flex;
     margin-bottom: 8px;
     border-radius: 40px;
     object-fit: cover;
   }
 
-  >h3 {
+  > h3 {
     margin: 12px 0px 0px;
   }
 
-  >p {
+  > p {
     margin: 8px 20px 0px;
-
   }
 
   .label {
@@ -203,9 +193,6 @@ section {
   -ms-overflow-style: none;
   justify-content: center;
   object-fit: contain;
-
-
-
 }
 
 .img-row-item {
@@ -215,15 +202,13 @@ section {
   border-radius: 8px;
   margin: 4px;
   filter: blur(1px);
-  transition: all .2s;
+  transition: all 0.2s;
   cursor: pointer;
-
 }
 
 .img-row-item.active {
   filter: blur(0px);
   opacity: 1;
-
 }
 
 .image-row::-webkit-scrollbar {
@@ -240,7 +225,6 @@ section {
   max-height: 900px;
   padding: 48px;
   border-radius: 24px;
-
 }
 
 [popover]::backdrop {
@@ -263,7 +247,7 @@ section {
   display: flex;
   flex-direction: column;
 
-  >input {
+  > input {
     /* width: 100%;
     font-size: 16px;
     /* border: #f1f1f1 solid 1px;
@@ -274,10 +258,9 @@ section {
     border-radius: 8px;
     border: 1px solid var(--border-light);
     font-size: 15px;
-
   }
 
-  >input:focus {
+  > input:focus {
     outline: none;
     border: #f1f1f1 solid 1px;
   }
@@ -299,8 +282,6 @@ background-color: #294fef !important ;
   --border-light: #d2d2d7;
   --box-background: #ffffff;
 }
-
-
 
 .container {
   max-width: 980px;
@@ -468,7 +449,6 @@ nav {
   z-index: 1000;
 }
 
-
 .nav-container {
   max-width: 1200px;
   margin: 0 auto;
@@ -517,4 +497,16 @@ nav {
 
 .nav-icons button:hover {
   background: rgba(0, 0, 0, 0.05);
+}
+
+.dropdown {
+  opacity: 0;
+  height: 0;
+  transition: max-height 0.2s ease-out;
+
+  transition: opacity 0.15s;
+}
+.dropdown.active {
+  opacity: 100;
+  height: auto;
 }
