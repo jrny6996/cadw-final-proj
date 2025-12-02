@@ -16,9 +16,9 @@ export const handleEmptyCart = () => {
 export const handleCheckoutBtn = () => {
   const btn = document.querySelector("#checkout-btn");
   const shippingForm = document.querySelector("#shipping-form");
-  console.log(btn, shippingForm);
+  // console.log(btn, shippingForm);
   //   console.log(shippingForm);
-  btn.addEventListener("click", () => {
+  btn?.addEventListener("click", () => {
     if (shippingForm.reportValidity()) shippingForm.submit();
     // alert("Found");
   });

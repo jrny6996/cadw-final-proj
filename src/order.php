@@ -55,6 +55,12 @@ if (strlen($credit_card) == 16 && strlen($cvc) == 3 && strlen($shipping_address)
         <div class="container">
             <h1>Successfully completed order</h1>
             <p>Visit <a href="/account.php">account</a> to see your orders</p>
+            <script>
+                cookieStore.set({
+                    name: "cart",
+                    value: JSON.stringify([]),
+                });
+            </script>
         </div>
 <?
 
