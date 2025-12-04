@@ -8,7 +8,7 @@
 }
 
 header {
-  background-color: rgba(67, 67, 67, 0.8);
+  background-color: rgba(41, 40, 40, 0.8);
   color: white;
   position: fixed;
   inset: auto 0;
@@ -16,7 +16,8 @@ header {
   justify-content: center;
   align-items: center;
   padding: 8px;
-  backdrop-filter: blur(4px);
+  z-index: 10;
+  backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(4px);
 }
 .header-container .link {
@@ -432,6 +433,7 @@ section {
   filter: blur(1px);
   transition: all 0.2s;
   cursor: pointer;
+  z-index: 0;
 }
 
 .img-row-item.active {

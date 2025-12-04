@@ -51,7 +51,7 @@ if ($method == 'POST') {
     <?php
     include "components/header.php";
     ?>
-    <main class="container" style=" padding-top: 24px;">
+    <main class="container" style=" padding-top: 96px;">
         <?php
 
         if (isset($_SESSION['logged_in']) && isset($_SESSION['user_id'])) {

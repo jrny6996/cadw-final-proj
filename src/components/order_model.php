@@ -7,7 +7,7 @@ function get_user_by_email($email, $conn)
 
     $results = $curr->get_result();
     $row = $results->fetch_assoc();
-    var_dump($row);
+    // var_dump($row);
     if ($row) {
         return [true, $row['id']];
     }
@@ -53,5 +53,3 @@ function create_order($conn, $user_id, $addr)
 
     return [true, $new_id];
 }
-
-

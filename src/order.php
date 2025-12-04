@@ -29,8 +29,8 @@ $cvc = $req['cvc'];
 $email = $req['email'];
 $shipping_address = $req['address'] . ", " . $req['city'] . ", " . $req['state'] . ", " . $req['zip'] . ", " . $req['country'];
 if (strlen($credit_card) == 16 && strlen($cvc) == 3 && strlen($shipping_address) > 10 && strlen($email) > 1) {
-    echo ($email);
-    echo ($shipping_address);
+    // echo ($email);
+    // echo ($shipping_address);
     $connection = $conn;
     $id;
     $res = get_user_by_email($email, $connection);
@@ -48,7 +48,7 @@ if (strlen($credit_card) == 16 && strlen($cvc) == 3 && strlen($shipping_address)
             $curr = $conn->prepare('INSERT INTO purchases(product_id, quantity, order_id) VALUES(?, ?, ?)');
             $curr->bind_param("iii", $key, $value, $order_id);
             $curr->execute();
-            echo ($key . "," . $value . "," . $order_id . "<br>");
+            // echo ($key . "," . $value . "," . $order_id . "<br>");
         }
 
 ?>
@@ -57,9 +57,12 @@ if (strlen($credit_card) == 16 && strlen($cvc) == 3 && strlen($shipping_address)
             <p>Visit <a href="/account.php">account</a> to see your orders</p>
             <script>
                 cookieStore.set({
-                    name: "cart",
-                    value: JSON.stringify([]),
-                });
+                        name: "cart",
+                        value: JSON.stringify([]),
+                    })
+                    .then(() => {
+                        window.location.replace("/account.php")
+                    })
             </script>
         </div>
 <?

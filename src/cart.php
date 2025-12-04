@@ -44,8 +44,7 @@ include "db_connect.php";
 
                     <div class="card-body" style="background: #6576d4ff; color: white; display: flex; justify-content: center; align-items: center; border-radius: 16px;  flex-direction: column;">
 
-
-                        <h1>Looks like there's nothing in your cart</h1>
+                        <p><strong>Looks like nothing is in you cart</strong></p>
                         <p>Click to see our products</p>
                     </div>
                 </a>

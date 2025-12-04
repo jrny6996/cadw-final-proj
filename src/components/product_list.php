@@ -11,7 +11,7 @@
 
     ?>
 
-    <div class="container " style="padding: 48px 0px;">
+    <div class="container " style="padding: 96px 0px;">
         <div>
             <div class="category-select">
                 <?php
@@ -29,8 +29,8 @@
 
         </div>
 
-        <div id="product-category-list"
-            class="product-category-list" hx-trigger="load" hx-swap="innerHTML" hx-target="this" hx-get="/components/products.php">
+        <div id="product-category-list""
+            class=" product-category-list" hx-trigger="load" hx-swap="innerHTML" hx-target="this" hx-get="/components/products.php">
 
         </div>
     </div>

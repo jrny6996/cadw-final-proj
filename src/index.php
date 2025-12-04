@@ -19,7 +19,9 @@
     <?php include "components/header.php"; ?>
     <main>
         <?php include "components/hero.php"; ?>
-        <div style="background-color: white;">
+        <?php include "components/cards.php"; ?>
+
+        <div style="background-color: white;" id="product-list">
 
             <?php include "components/product_list.php"; ?>
         </div>

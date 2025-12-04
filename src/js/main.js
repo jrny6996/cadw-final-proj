@@ -20,6 +20,16 @@ export const handleDropdowns = () => {
   });
   // });
 };
+const readCartCount = async () => {
+  const cartCookie = await cookieStore.get("cart");
+  let prev = [];
+
+  if (cartCookie) {
+    prev = JSON.parse(cartCookie.value);
+  }
+
+  document.querySelector("#cart-count").innerHTML = prev.length;
+};
 document.addEventListener("DOMContentLoaded", () => {
   handleCategoryClicks();
   handleImageClicks();
@@ -28,4 +38,6 @@ document.addEventListener("DOMContentLoaded", () => {
   handleBuyBtn();
   handleCheckoutBtn();
   handleEmptyCart();
+
+  readCartCount();
 });

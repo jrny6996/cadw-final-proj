@@ -15,66 +15,59 @@ export const handleCategoryClicks = () => {
   });
 };
 
-
 export const handleImageClicks = () => {
-
   htmx.on("htmx:afterSwap", (event) => {
-    const pcl = document.querySelector("#product-category-list")
+    const pcl = document.querySelector("#product-category-list");
 
-    if (!pcl) return
-    console.log(pcl)
+    if (!pcl) return;
+    console.log(pcl);
     pcl.querySelectorAll(".product-horizontal-list-card")?.forEach((card) => {
-      console.log(card)
-      const imgRow = card?.querySelector(".image-row")
-      imgRow?.querySelectorAll('img')
-        ?.forEach((img) => {
+      console.log(card);
+      const imgRow = card?.querySelector(".image-row");
+      imgRow?.querySelectorAll("img")?.forEach((img) => {
+        img.addEventListener("click", () => {
+          imgRow
+            .querySelectorAll("img")
+            .forEach((naImg) => naImg.classList.remove("active"));
+          img.classList.add("active");
+          const src = img.src;
+          const featuredImg = img
+            .closest(".product-horizontal-list-card")
+            .querySelector(".featured-image img");
 
-          img.addEventListener('click', () => {
-            imgRow.querySelectorAll('img').forEach((naImg) => naImg.classList.remove("active"))
-            img.classList.add("active")
-            const src = img.src
-            const featuredImg = img.closest(".product-horizontal-list-card").querySelector(".featured-image img")
-
-            console.log(featuredImg)
-            featuredImg.src = src
-
-          })
-
+          console.log(featuredImg);
+          featuredImg.src = src;
         });
-
-    })
+      });
+    });
   });
-
-
-}
+};
 
 export const handleBuyBtn = () => {
   htmx.on("htmx:afterSwap", (event) => {
-    const buyBtns = document.querySelectorAll(".buy-btn")
+    const buyBtns = document.querySelectorAll(".buy-btn");
     // console.log(buyBtns)
     buyBtns.forEach((btn) => {
-      btn.addEventListener('click', async () => {
-
+      btn.addEventListener("click", async () => {
         const prodId = btn.dataset.productId;
 
-        const cartCookie = await cookieStore.get('cart');
+        const cartCookie = await cookieStore.get("cart");
         let prev = [];
 
         if (cartCookie) {
-          prev = JSON.parse(cartCookie.value); 
+          prev = JSON.parse(cartCookie.value);
         }
 
-        prev.push(prodId);  
+        prev.push(prodId);
 
         await cookieStore.set({
           name: "cart",
           value: JSON.stringify(prev),
         });
+        document.querySelector("#cart-count").innerHTML = prev.length;
 
-        document.querySelector("#product-popover")?.hidePopover()
-
-      })
-    })
-  })
-
-}
+        document.querySelector("#product-popover")?.hidePopover();
+      });
+    });
+  });
+};

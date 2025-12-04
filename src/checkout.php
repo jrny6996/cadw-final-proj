@@ -36,8 +36,7 @@
     </nav> -->
 
     <?php include "components/header.php"; ?>
-    <div class="container" style="padding-top: 24px;">
-        <h1 class="header">IPear Order Review</h1>
+    <div class="container" style="padding-top: 96px;">
 
         <div class="checkout-layout">
 
