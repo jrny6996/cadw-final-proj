@@ -65,7 +65,7 @@ if ($method == 'POST') {
 
                 <?php
                 include "order_history.php";
-                include "cart.php";
+                include "./cart.php";
 
                 ?>
             </div>
@@ -74,7 +74,7 @@ if ($method == 'POST') {
         <?php
         } else {
         ?>
-            <div hx-get="/login.php" hx-target="main" hx-swap="innerHTML" hx-select="#content" hx-trigger="load">
+            <div hx-get="login.php" hx-target="main" hx-swap="innerHTML" hx-select="#content" hx-trigger="load">
             </div>
         <?php
         }

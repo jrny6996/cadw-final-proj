@@ -3,7 +3,7 @@
      style="display:flex; align-items: center;">
      <div class="feature-content">
          <div class="feature-visual">
-             <img src="/images/67856d6c7087fa508e65b185_AdobeStock_201711689.jpeg">
+             <img src="images/67856d6c7087fa508e65b185_AdobeStock_201711689.jpeg">
          </div>
          <div class="feature-text">
              <div class="feature-text">

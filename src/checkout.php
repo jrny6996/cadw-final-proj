@@ -1,3 +1,6 @@
+<?php include "db_connect.php";
+$sub_total = 0;
+?>
 <!DOCTYPE html>
 
 <!--Fernnada-->
@@ -107,7 +110,7 @@
                 </div>
 
                 <!-- Bag  -->
-                <?php include "cart.php" ?>
+                <?php include "cart.php"; ?>
 
             </div>
 
@@ -120,7 +123,9 @@
                     $cookie = $_COOKIE['cart'] ?? null;
                     if ($cookie) {
 
-                        $cart = json_decode($cookie, true);
+                        // $cart = json_decode($cookie, true);
+                        $cart = array('intval', explode(',', $_COOKIE['cart']));
+
                         if (count($cart) >= 1) {
                             foreach ($cart as $id) {
                                 $curr = $conn->prepare("SELECT * FROM products WHERE id = ?");

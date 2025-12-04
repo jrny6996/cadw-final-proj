@@ -2,7 +2,7 @@
 include "db_connect.php";
 include "components/order_model.php";
 $req = $_POST;
-// var_dump($req);
+var_dump($req);
 
 $cart = $_COOKIE['cart'] ?? '[]';
 $cart = json_decode($cart, true);  // now it's an array of IDs
@@ -23,7 +23,7 @@ foreach ($cart as $item) {
 ?>
 
 <hr>
-<?
+<?php
 $credit_card = $req['credit-card'];
 $cvc = $req['cvc'];
 $email = $req['email'];
@@ -54,18 +54,18 @@ if (strlen($credit_card) == 16 && strlen($cvc) == 3 && strlen($shipping_address)
 ?>
         <div class="container">
             <h1>Successfully completed order</h1>
-            <p>Visit <a href="/account.php">account</a> to see your orders</p>
+            <p>Visit <a href="account.php">account</a> to see your orders</p>
             <script>
                 cookieStore.set({
                         name: "cart",
                         value: JSON.stringify([]),
                     })
                     .then(() => {
-                        window.location.replace("/account.php")
+                        window.location.replace("account.php")
                     })
             </script>
         </div>
-<?
+<?php
 
         // CREATE TABLE purchases(
         //     id INT PRIMARY KEY AUTO_INCREMENT,

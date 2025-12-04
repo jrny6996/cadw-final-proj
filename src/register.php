@@ -19,13 +19,13 @@
     <main class="container" style=" padding-top: 96px;">
         <h1>Create an Account</h1>
         <form class="card card-body default-form"
-            action="/account.php"
+            action="account.php"
             method="POST">
 
             <input type="email" name="email" required placeholder="john@example.com">
             <input type="password" name="pw" required placeholder="password">
             <input type="password" name="pw-2" required placeholder="confirm password">
-            <p style="display: block; margin: 12px 0px 0px 0px; padding: 0px;">Already have an account? Login: <a href="/login.php">here</a></p>
+            <p style="display: block; margin: 12px 0px 0px 0px; padding: 0px;">Already have an account? Login: <a href="login.php">here</a></p>
             <input type="submit" value="Submit" class="btn-primary" style="width: 100% !important;">
 
         </form>

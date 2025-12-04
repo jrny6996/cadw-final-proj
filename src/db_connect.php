@@ -1,12 +1,12 @@
 <?php
 
-$servername = "db";
-$username = "app_user";
-$password = "app_pass";
-$dbname = "app_db";
+$server_name = "localhost";
+$username = "jdc356";
+$password = "Aifee7hi";
+$db_name = "jdc356";
 
 // Create connection
-$conn = new mysqli($servername, $username, $password, $dbname);
+$conn = new mysqli($server_name, $username, $password, $db_name);
 
 // Check connection
 ?>

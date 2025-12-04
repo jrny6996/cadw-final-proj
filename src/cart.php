@@ -13,10 +13,13 @@ include "db_connect.php";
             Empty Cart
         </button>
     </div>
+
     <div id="cart-content">
 
         <?php
+        echo ("Hello");
         $cookie = $_COOKIE['cart'] ?? null;
+        var_dump($_COOKIE);
         if ($cookie) {
 
             $cart = json_decode($cookie, true);
@@ -40,7 +43,7 @@ include "db_connect.php";
                 }
             } else {
                 ?>
-                <a href="/index.php" style="text-decoration: none !important;">
+                <a href="index.php" style="text-decoration: none !important;">
 
                     <div class="card-body" style="background: #6576d4ff; color: white; display: flex; justify-content: center; align-items: center; border-radius: 16px;  flex-direction: column;">
 
