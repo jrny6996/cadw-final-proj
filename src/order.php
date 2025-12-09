@@ -1,4 +1,5 @@
 <?php
+session_start();
 include "db_connect.php";
 include "components/order_model.php";
 $req = $_POST;
@@ -48,7 +49,8 @@ foreach ($cart as $item) {
 <?php
 $credit_card = $req['credit-card'];
 $cvc = $req['cvc'];
-$email = $req['email'];
+// $email = $req['email'];
+$email = $_SESSION["user_email"];
 $shipping_address = $req['address'] . ", " . $req['city'] . ", " . $req['state'] . ", " . $req['zip'] . ", " . $req['country'];
 if (strlen($credit_card) == 16 && strlen($cvc) == 3 && strlen($shipping_address) > 10 && strlen($email) > 1) {
     // echo ($email);

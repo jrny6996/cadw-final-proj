@@ -56,7 +56,7 @@ $sub_total = 0;
 
                             <div class="input-group">
                                 <label>Email</label>
-                                <input name="email" type="email" placeholder="you@example.com" required>
+                                <input disabled value="<?php echo ($_SESSION["user_email"]); ?>" name="email" type="email" placeholder="you@example.com" required>
                             </div>
 
 
