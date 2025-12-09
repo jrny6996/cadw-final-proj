@@ -42,14 +42,13 @@ export const handleImageClicks = () => {
     });
   });
 };
-
 export const handleBuyBtn = () => {
   htmx.on("htmx:afterSwap", (event) => {
     const buyBtns = document.querySelectorAll(".buy-btn");
     // console.log(buyBtns)
     buyBtns.forEach((btn) => {
       btn.addEventListener("click", async () => {
-        const prodId = btn.dataset.productId;
+        const prodId = parseInt(btn.dataset.productId);
 
         const cartCookie = await cookieStore.get("cart");
         let prev = [];

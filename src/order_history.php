@@ -45,7 +45,7 @@ foreach ($results as $row) {
 
         ?>
         <div style="display:flex">
-            <h3 style="flex: 1;">Order <? echo ($row["id"]); ?></h3>
+            <h3 style="flex: 1;">Order <?php echo ($row["id"]); ?></h3>
             <h3 style="font-weight: 400;">$<?php echo ($total); ?> + $<?php echo ($total * .07);  ?> = <?php echo ($total * 1.07); ?></h3>
             <button class="btn dropdown-btn">View</button>
         </div>
@@ -64,12 +64,12 @@ foreach ($results as $row) {
                 </div>
             </div>
 
-        <?
+        <?php
         }
 
         ?>
     </div>
-<?
+<?php
 }
 ?>
 <hr>

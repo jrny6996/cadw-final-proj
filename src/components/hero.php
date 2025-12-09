@@ -8,11 +8,11 @@
                 Say hello to the latest generation of IPear
             </p>
             <div class="cta-buttons">
-                <a href="/#product-list">
+                <a href="#product-list">
 
                     <button class="btn btn-primary">Buy Now</button>
                 </a>
-                <a href="/#about">
+                <a href="#about">
 
                     <button class="btn btn-secondary">Learn More</button>
                 </a>

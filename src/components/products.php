@@ -62,7 +62,7 @@ foreach ($result as $row) {
             <?php foreach ($images as $image) { ?>
 
                 <img height="64" width="64" src="<?php echo ($image['url']); ?>" alt="product image" class="img-row-item <?php if ($next_active == true) echo ('active');
-                                                                                                                        $next_active = false;    ?>">
+                                                                                                                            $next_active = false;    ?>">
 
             <?php } ?>
             </div>
@@ -78,7 +78,7 @@ foreach ($result as $row) {
                 <button class="btn btn-primary "
                     style="text-decoration: none !important;"
                     popovertarget="product-popover"
-                    hx-get="/components/product_page.php?id=<?php echo ($row['id']); ?>"
+                    hx-get="components/product_page.php?id=<?php echo ($row['id']); ?>"
                     hx-target="#product-popover"
                     hx-swap="innerHTML"
                     data-id="<?php echo ($row['id']); ?>">

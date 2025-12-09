@@ -5,20 +5,20 @@
              <div class="footer-column">
                  <h4>Shop and Learn</h4>
                  <ul>
-                     <li><a href="/">Home</a></li>
-                     <li><a href="/#product-list">Store</a></li>
-                     <li><a href="/#about">About</a></li>
-                     <li><a href="/#ipear">PearPad</a></li>
+                     <li><a href="index.php">Home</a></li>
+                     <li><a href="#product-list">Store</a></li>
+                     <li><a href="#about">About</a></li>
+                     <li><a href="#ipear">PearPad</a></li>
 
                  </ul>
              </div>
              <div class="footer-column">
                  <h4>Manage Account</h4>
                  <ul>
-                     <a class="link" href="/account.php">View Orders</a>
-                     <a class="link" href="/register.php">Create An Account</a>
+                     <a class="link" href="account.php">View Orders</a>
+                     <a class="link" href="register.php">Create An Account</a>
 
-                     <a class="link" href="/logout.php">Log out</a>
+                     <a class="link" href="logout.php">Log out</a>
 
                  </ul>
              </div>
