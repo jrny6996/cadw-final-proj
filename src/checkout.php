@@ -1,4 +1,6 @@
-<?php include "db_connect.php";
+<?php
+session_start();
+include "db_connect.php";
 $sub_total = 0;
 ?>
 <!DOCTYPE html>
