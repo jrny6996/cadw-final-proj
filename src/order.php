@@ -4,8 +4,30 @@ include "components/order_model.php";
 $req = $_POST;
 var_dump($req);
 
-$cart = $_COOKIE['cart'] ?? '[]';
-$cart = json_decode($cart, true);  // now it's an array of IDs
+$cookie = $_COOKIE['cart'] ?? '[]';
+function stringToIntArray($str)
+{
+    $intArray = array();
+    $append = "";
+    for ($i = 0; $i < strlen($str); $i++) {
+        if ($str[$i] ==  '"' || $str[$i] == "'"  || $str[$i] == "[") {
+            continue;
+        }
+
+
+        if ($str[$i] == "]" || $str[$i] == ",") {
+            $num =  (int) $append;
+            $intArray[] = $num;
+            $append = "";
+            continue;
+        }
+        $append = $append . $str[$i];
+    }
+
+    return $intArray;
+}
+$cart = stringToIntArray($cookie);
+// $cart = json_decode($cart, true);  // now it's an array of IDs
 
 $product_ids = [];
 
